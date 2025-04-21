@@ -4,7 +4,6 @@ This directory contains small scripts to automate AWS cloud tasks.
 
 ## Available Scripts
 
----
 
 ### `create_tgw_association.sh`
 
@@ -16,7 +15,7 @@ Includes a dry-run feature for safe testing.
 ```bash
 bash create_tgw_association.sh
 ```
-
+---
 ### `list_ec2_instances.py`
 
 Lists all EC2 instances in your AWS account, displaying:
@@ -38,3 +37,20 @@ Lists all EC2 instances in your AWS account, displaying:
 python3 list_ec2_instances.py
 ```
 
+---
+
+### `ec2_health_check.sh`
+
+Pings an EC2 instance's public IP address to check if it is reachable.
+
+**Features:**
+
+- Accepts an IP address as a command-line argument
+- Sends 3 ICMP packets to check connectivity
+- Displays a clear success ✅ or failure ❌ message
+
+**Usage:**
+
+```bash
+bash ec2_health_check.sh <EC2_PUBLIC_IP>
+```
